@@ -24,7 +24,6 @@ public class TodoItemController {
 		List<TodoItem> items=todoItemService.getTodos();
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("itemList", items);
-		mv.addObject("val","Hello Akash");
 		mv.setViewName("index");
 		return mv;
 	}

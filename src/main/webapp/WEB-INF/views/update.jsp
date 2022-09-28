@@ -8,22 +8,27 @@
       integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
       crossorigin="anonymous"
     />
-    <title>Spring Boot TODO list</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css">
+    <title>TODO list-update task</title>
   </head>
   <body>
+    <div class="container-fluid nav">
+    	<h2 class="text-center" >SPRING-BOOT TODO LIST <i class="fa-brands fa-java"></i></h2>
+    </div> 
     <div class="container">
-      <h1 class="text-center">Todo List</h1>
+      <br>
       <form action="/update/${todoItem.id}" method="post">
-        <h3>Edit Task Description</h3>
-        <textarea name="description" id="" cols="155" rows="4">
+        <h4>EDIT TASK <i class="fa fa-cog"></i></h4>
+        <textarea name="description" id="" rows="2" required="required">
 ${todoItem.description}
-        </textarea>
-        <label for="isComplete">Task Completed? </label>
-        <input type="radio" id="isComplete" name="isComplete" value="true" />Yes
-        <input type="radio" id="isComplete" name="isComplete" value="false" />No
+        </textarea><br><br>
+        <label for="isComplete" class="isComplete">Task Completed? </label>
+        <input type="radio" id="isComplete" name="isComplete" value="true" /><label class="isComplete"> YES </label>
+        <input type="radio" id="isComplete" name="isComplete" value="false" required/><label class="isComplete"> NO </label>
 
         <br /><br />
-        <input type="submit" class="btn btn-primary" value="Update Todo!" />
+        <input type="submit" class="btn btn-primary btn-lg" value="UPDATE TODO" />
       </form>
     </div>
     <!-- Latest compiled and minified JavaScript -->
